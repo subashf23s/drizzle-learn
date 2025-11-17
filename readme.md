@@ -10,3 +10,8 @@ npx tsc --init
 
 git init
 git remote add origin git@github.com:subashf23s/drizzle-learn.git
+
+# Drizzle postgres
+
+npm i drizzle-orm postgres dotenv
+npm i -D drizzle-kit
