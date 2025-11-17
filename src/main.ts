@@ -1,1 +1,4 @@
-console.log("Hello, Drizzle again!");
+async function main() {
+  console.log("Hello, Drizzle!");
+}
+main();
