@@ -1,4 +1,10 @@
+import { db } from "./drizzle/db";
+import { UserTable } from "./drizzle/schema";
 async function main() {
-  console.log("Hello, Drizzle!");
+  await db.insert(UserTable).values({
+    name: "Bob",
+  });
+  const users = await db.select().from(UserTable);
+  console.log(users);
 }
 main();
