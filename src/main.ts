@@ -1,12 +1,15 @@
-import { db } from "./drizzle/db";
-import { UserTable } from "./drizzle/schema/users";
+import {
+  selectUsers,
+  insertUser,
+  updateUserExample,
+  deleteUserExample,
+} from "./queries";
+
 async function main() {
-  await db.insert(UserTable).values({
-    firstName: "Bob",
-    lastName: "Smith",
-    email: "bobsmith@gmail.com",
-  });
-  const users = await db.select().from(UserTable);
-  console.log(users);
+  // insertUser();
+  // await selectUsers();
+  // await updateUserExample();
+  // await deleteUserExample();
+  await selectUsers();
 }
 main();
