@@ -1,7 +1,7 @@
 import { db } from "../../drizzle/db";
 import {
   employee_demographics,
-  employee_salary,
+  employeeSalary,
   parks_departments,
 } from "../../drizzle/schema";
 
@@ -70,6 +70,6 @@ const parks_departmentsData = [
 
 export const dataInsertion = async () => {
   await db.insert(employee_demographics).values(employee_demographicsData);
-  await db.insert(employee_salary).values(employee_salaryData);
+  await db.insert(employeeSalary).values(employee_salaryData);
   await db.insert(parks_departments).values(parks_departmentsData);
 };
