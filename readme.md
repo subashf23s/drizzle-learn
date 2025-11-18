@@ -1,30 +1,33 @@
-### Learning Drizzle
+# Learning Drizzle
 
-# project setup
+## project setup
 
-npm init -y
-npm i -D typescript tsx @types/node
-npx tsc --init
+`npm init -y`
+`npm i -D typescript tsx @types/node`
+`npx tsc --init`
 
-"dev":"tsx watch src/main.ts"
+In package.json
+`"dev":"tsx watch src/main.ts"`
 
-git init
-git remote add origin git@github.com:subashf23s/drizzle-learn.git
+### Initialize and add git
 
-# Drizzle postgres
+`git init`
+`git remote add origin git@github.com:subashf23s/drizzle-learn.git`
 
-npm i drizzle-orm postgres dotenv
-npm i -D drizzle-kit
+## Drizzle postgres
 
-# Create local db
+`npm i drizzle-orm postgres dotenv`
+`npm i -D drizzle-kit`
 
-sudo -iu postgres
-psql
+## Create local db
 
-create user drizzleuser with password 'drizzlepassword';
+`sudo -iu postgres`
+`psql`
 
-create database drizzle_learn;
+`create user drizzleuser with password 'drizzlepassword';`
 
-grant all privileges on database drizzle_learn to drizzleuser;
-\c drizzle_learn
-ALTER SCHEMA public OWNER TO drizzleuser
+`create database drizzle_learn;`
+
+`grant all privileges on database drizzle_learn to drizzleuser;`
+`\c drizzle_learn`
+`ALTER SCHEMA public OWNER TO drizzleuser`
